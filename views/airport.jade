@@ -1,0 +1,11 @@
+extends layout
+
+block body
+    .container
+        .row
+            .col-xs-12.col-sm-6.text-left.padding
+                h2= airport
+            .col-xs-12.col-sm-6.text-right.padding
+                input(type='checkbox', name='type', checked, data-size='large')
+        .row
+            #table

@@ -1,2 +1,1 @@
-# airport-timetable
-Simple node.js app
+# airport-board
