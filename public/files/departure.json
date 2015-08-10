@@ -1,0 +1,24 @@
+[
+  {
+    "number": "ДР 113",
+    "airline": "Pobeda",
+    "aircraft": "Боинг 737-800",
+    "destination": "Sochi (Adler)",
+    "time": "00:05 11.08.2015",
+    "status": "Departed at 00:05"
+  }, {
+    "number": "ЮТ 555",
+    "airline": "UTair Aviation",
+    "aircraft": "Боинг 737-500",
+    "destination": "Chelyabinsk",
+    "time": "00:05 11.08.2015",
+    "status": "Departed at 00:15"
+  }, {
+    "number": "Р2 5816",
+    "airline": "Orenburg Airlines",
+    "aircraft": "Боинг 737-800",
+    "destination": "Chelyabinsk",
+    "time": "00:05 11.08.2015",
+    "status": "Departed at 00:09"
+  }
+]

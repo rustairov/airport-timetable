@@ -1,7 +1,8 @@
 Date.prototype.yyyymmdd = function() {
-    var yyyy = this.getFullYear().toString();
-    var mm = (this.getMonth()+1).toString();
-    var dd  = this.getDate().toString();
+    var yyyy = this.getFullYear().toString()
+        , mm = (this.getMonth()+1).toString()
+        , dd  = this.getDate().toString()
+        ;
     return yyyy + '-' + (mm[1]?mm:"0"+mm[0]) + '-' + (dd[1]?dd:"0"+dd[0]);
 };
 
@@ -12,7 +13,6 @@ $(function() {
         $.get(window.location.pathname + '/' + type, {
             date: date.yyyymmdd()
         }, function(data, textStatus, jqXHR) {
-            console.log(data);
             $('#table').html(data);
         });
     };
