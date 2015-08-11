@@ -5,7 +5,8 @@ var fs = require('fs');
 var readFile = function(req, res) {
     var type = req.params.type;
     var pathToFile = '';
-    switch (type) {
+
+	switch (type) {
         case 'dep':
             pathToFile = __dirname + '/../public/files/departure.json';
             break;
@@ -15,16 +16,34 @@ var readFile = function(req, res) {
         default:
             break;
     }
+
     fs.readFile(pathToFile, function(err, data) {
-        var arr = JSON.parse(data.toString());
+        var flights = JSON.parse(data.toString())
+	        , arr = [];
 
-        arr.forEach(function(flight) {
-            console.log(flight);
+	    flights.forEach(function(flight) {
+		    arr.push({
+				number: flight.number,
+			    airline: {
+				    name: flight.airline,
+				    img: '/imgs/airline/' + flight.airline.replace(' ','_') + '.png'
+			    },
+			    aircraft: {
+				    name: flight.aircraft.split(' ')[0],
+				    model: flight.aircraft.split(' ')[1]
+			    },
+			    destination: flight.destination,
+			    date: {
+				    time: flight.time.split(' ')[0],
+				    date: flight.time.split(' ')[1]
+
+			    },
+			    status: flight.status,
+			    type: flight.type
+		    });
         });
 
-        res.render('table', {
-            table: arr
-        });
+        res.render('table', { data: arr });
 
     });
 };

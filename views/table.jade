@@ -3,25 +3,30 @@
         table.table.table-striped.table-bordered.table-hover
             thead
                 tr
+                    th.hidden-xs
                     th Flight Number
                     th Airline
-                    th Aircraft
-                    th Destination City
-                    th Sheduled Time
+                    th.hidden-xs Aircraft
+                    th.hidden-xs City
+                    th Time
                     th Status
             tboby
-
-                tr
-                    th 1
-                    th 2
-                    th 3
-                    th 4
-                    th 5
-                    th 6
-                tr
-                    th 1
-                    th 2
-                    th 3
-                    th 4
-                    th 5
-                    th 6
+                each row in data
+                    tr
+                        th.hidden-xs
+                            if (row.type == 'Departure')
+                                i.fa.fa-plane
+                            else
+                                i.fa.fa-plane.fa-flip-vertical
+                        th= row.number
+                        th
+                            img(src= row.airline.img)
+                            span= row.airline.name
+                        th.hidden-xs
+                            span= row.aircraft.name + ' '
+                            = row.aircraft.model
+                        th.hidden-xs= row.destination
+                        th= row.date.time
+                            br
+                            span= row.date.date
+                        th= row.status

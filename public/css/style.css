@@ -1,3 +1,10 @@
+@media (max-width: 992px) {
+    th span {
+        display: none;
+    }
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -8,6 +15,14 @@ html {
 
 h3, p {
     margin: 0;
+}
+
+th {
+    font-weight: normal;
+}
+
+th img {
+    margin-right: 10px;
 }
 
 .padding {
