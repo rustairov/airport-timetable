@@ -30,4 +30,4 @@
                         td= row.date.time
                             br
                             span= row.date.date
-                        td(class= row.landed ? 'success' : '')= row.status
+                        td(class= row.status.status)= row.status.text

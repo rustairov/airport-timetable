@@ -34,8 +34,18 @@ var readFile = function(req, res) {
 				    date: flight.time.split(' ')[1]
 
 			    },
-			    status: flight.status,
-                landed: /Landed/.test(flight.status)
+			    status: {
+                    text: flight.status,
+                    status: function() {
+                         if (/Landed/.test(flight.status)) {
+                             return 'success';
+                         } else if (/Cancelled/.test(flight.status)) {
+                             return 'danger';
+                         } else {
+                            return '';
+                         }
+                    }()
+                }
 		    });
         });
 
