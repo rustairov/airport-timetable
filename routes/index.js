@@ -4,9 +4,9 @@ var fs = require('fs');
 
 var readFile = function(req, res) {
     var type = req.params.type;
-    var pathToFile = __dirname + '/../public/files/flights.json';
 
-    fs.readFile(pathToFile, function(err, data) {
+    //любая другая обработка данных либо запрос к какому-нибудь api
+    fs.readFile(__dirname + '/../public/files/flights.json', function(err, data) {
         var flights = JSON.parse(data.toString())
 	        , arr = [];
 
