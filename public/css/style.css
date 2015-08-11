@@ -1,12 +1,23 @@
 @media (max-width: 992px) {
-    th span {
+    td span {
         display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    td:nth-child(2) {
+        min-width: 185px;
+    }
+
+    td:nth-child(3) {
+        min-width: 110px;
     }
 }
 
 
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
 }
 
 html {
@@ -16,13 +27,28 @@ html {
 h3, p {
     margin: 0;
 }
-
+/*
 th {
     font-weight: normal;
 }
+*/
+.table > thead > tr > th,
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
 
-th img {
+td img {
     margin-right: 10px;
+}
+
+td:nth-child(1),
+td:nth-child(5),
+td:nth-child(6) {
+    text-align: center;
+}
+
+td:nth-child(6) span {
+    font-size: 10px;
 }
 
 .padding {
@@ -30,7 +56,7 @@ th img {
 }
 
 .dme {
-    background: url(/imgs/dme.jpg) no-repeat 50% 50%;
+    background: url(/imgs/dme.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -67,4 +93,16 @@ th img {
 
 .panel {
     margin-bottom: 0;
+}
+
+.fa-a:before {
+    font-weight: bold;
+    color: #d9534f;
+    content: 'A';
+}
+
+.fa-b:before {
+    font-weight: bold;
+    color: #337ab7;
+    content: 'B';
 }

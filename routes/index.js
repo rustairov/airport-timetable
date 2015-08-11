@@ -4,22 +4,17 @@ var fs = require('fs');
 
 var readFile = function(req, res) {
     var type = req.params.type;
-    var pathToFile = '';
-
-	switch (type) {
-        case 'dep':
-            pathToFile = __dirname + '/../public/files/departure.json';
-            break;
-        case 'arr':
-            pathToFile = __dirname +  '/../public/files/arrival.json';
-            break;
-        default:
-            break;
-    }
+    var pathToFile = __dirname + '/../public/files/flights.json';
 
     fs.readFile(pathToFile, function(err, data) {
         var flights = JSON.parse(data.toString())
 	        , arr = [];
+
+        if (type === 'dep') {
+            flights = flights.departure;
+        } else {
+            flights = flights.arrival;
+        }
 
 	    flights.forEach(function(flight) {
 		    arr.push({
@@ -33,13 +28,14 @@ var readFile = function(req, res) {
 				    model: flight.aircraft.split(' ')[1]
 			    },
 			    destination: flight.destination,
+                terminal: flight.terminal,
 			    date: {
 				    time: flight.time.split(' ')[0],
 				    date: flight.time.split(' ')[1]
 
 			    },
 			    status: flight.status,
-			    type: flight.type
+                landed: /Landed/.test(flight.status)
 		    });
         });
 

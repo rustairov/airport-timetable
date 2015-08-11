@@ -3,30 +3,31 @@
         table.table.table-striped.table-bordered.table-hover
             thead
                 tr
-                    th.hidden-xs
                     th Flight Number
                     th Airline
                     th.hidden-xs Aircraft
-                    th.hidden-xs City
+                    th.hidden-xs City (airport)
+                    th Terminal
                     th Time
                     th Status
             tboby
                 each row in data
+                    //tr(class= row.landed ? 'success' : '')
                     tr
-                        th.hidden-xs
-                            if (row.type == 'Departure')
-                                i.fa.fa-plane
-                            else
-                                i.fa.fa-plane.fa-flip-vertical
-                        th= row.number
-                        th
+                        td= row.number
+                        td
                             img(src= row.airline.img)
                             span= row.airline.name
-                        th.hidden-xs
+                        td.hidden-xs
                             span= row.aircraft.name + ' '
                             = row.aircraft.model
-                        th.hidden-xs= row.destination
-                        th= row.date.time
+                        td.hidden-xs= row.destination
+                        td
+                            if (row.terminal === 'A')
+                                i.fa.fa-a
+                            else
+                                i.fa.fa-b
+                        td= row.date.time
                             br
                             span= row.date.date
-                        th= row.status
+                        td(class= row.landed ? 'success' : '')= row.status
