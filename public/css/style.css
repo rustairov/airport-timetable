@@ -1,10 +1,13 @@
 @media (max-width: 992px) {
+
     td span {
         display: none;
     }
+
 }
 
 @media (min-width: 992px) {
+
     td:nth-child(2) {
         min-width: 185px;
     }
@@ -20,21 +23,8 @@ body {
     font-size: 12px;
 }
 
-html {
-
-}
-
 h3, p {
     margin: 0;
-}
-/*
-th {
-    font-weight: normal;
-}
-*/
-.table > thead > tr > th,
-.table > tbody > tr > td {
-    vertical-align: middle;
 }
 
 td img {
@@ -51,8 +41,17 @@ td:nth-child(6) span {
     font-size: 10px;
 }
 
-.padding {
+.table > thead > tr > th,
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.padding-15 {
     padding: 15px;
+}
+
+.panel {
+    margin-bottom: 0;
 }
 
 .dme {
@@ -89,10 +88,6 @@ td:nth-child(6) span {
     -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-}
-
-.panel {
-    margin-bottom: 0;
 }
 
 .fa-a:before {

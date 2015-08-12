@@ -2,18 +2,19 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
-var readFile = function(req, res) {
+var getFlights = function(req, res) {
     var type = req.params.type;
 
-    //любая другая обработка данных либо запрос к какому-нибудь api
+    //любые другие данные либо запрос к какому-нибудь api
     fs.readFile(__dirname + '/../public/files/flights.json', function(err, data) {
-        var flights = JSON.parse(data.toString())
-	        , arr = [];
+        var json = JSON.parse(data.toString())
+	        , arr = []
+	        , flights = [];
 
         if (type === 'dep') {
-            flights = flights.departure;
+	        flights = json.departure;
         } else {
-            flights = flights.arrival;
+	        flights = json.arrival;
         }
 
 	    flights.forEach(function(flight) {
@@ -21,7 +22,7 @@ var readFile = function(req, res) {
 				number: flight.number,
 			    airline: {
 				    name: flight.airline,
-				    img: '/imgs/airline/' + flight.airline.replace(' ','_') + '.png'
+				    img: '/imgs/airline/' + flight.airline.replace(/\s/g,'_') + '.png'
 			    },
 			    aircraft: {
 				    name: flight.aircraft.split(' ')[0],
@@ -36,13 +37,13 @@ var readFile = function(req, res) {
 			    },
 			    status: {
                     text: flight.status,
-                    status: function() {
+                    class: function() {
                          if (/Landed/.test(flight.status)) {
                              return 'success';
                          } else if (/Cancelled/.test(flight.status)) {
                              return 'danger';
                          } else {
-                            return '';
+                            return 'primary';
                          }
                     }()
                 }
@@ -62,6 +63,7 @@ router.get('/', function(req, res, next) {
     });
 });
 
+/* GET dme airoport. */
 router.get('/dme/:type?', function(req, res, next) {
     var airport = 'Moscow, Domodedovo (DME)';
     var type = req.params.type;
@@ -71,11 +73,12 @@ router.get('/dme/:type?', function(req, res, next) {
         res.render('airport', {
             title: airport,
             airport: airport,
-            css: 'dme'
+	        background: 'dme'
         });
     }
-}, readFile);
+}, getFlights);
 
+/* GET svo airoport. */
 router.get('/svo/:type?', function(req, res, next) {
     var airport = 'Moscow, Sheremetyevo (SVO)';
     var type = req.params.type;
@@ -85,11 +88,12 @@ router.get('/svo/:type?', function(req, res, next) {
         res.render('airport', {
             title: airport,
             airport: airport,
-            css: 'svo'
+	        background: 'svo'
         });
     }
-}, readFile);
+}, getFlights);
 
+/* GET vko airoport. */
 router.get('/vko/:type?', function(req, res, next) {
     var airport = 'Moscow, Vnukovo (VKO)';
     var type = req.params.type;
@@ -99,9 +103,9 @@ router.get('/vko/:type?', function(req, res, next) {
         res.render('airport', {
             title: airport,
             airport: airport,
-            css: 'vko'
+	        background: 'vko'
         });
     }
-}, readFile);
+}, getFlights);
 
 module.exports = router;

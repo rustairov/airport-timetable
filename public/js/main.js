@@ -10,6 +10,9 @@ $(function() {
 
     var getTable = function(type) {
         var date = new Date();
+
+	    $('#table').html('<div class="text-center"><i class="fa fa-refresh fa-5x fa-spin"></i></div>');
+
         $.get(window.location.pathname + '/' + type, {
             date: date.yyyymmdd()
         }, function(data, textStatus, jqXHR) {

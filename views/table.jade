@@ -1,33 +1,36 @@
-.col-xs-12
-    .panel.panel-default
-        table.table.table-striped.table-bordered.table-hover
-            thead
+.panel.panel-default
+    table.table.table-striped.table-bordered.table-hover
+        thead
+            tr
+                th Flight Number
+                th Airline
+                th.hidden-xs Aircraft
+                th.hidden-xs City (airport)
+                th Terminal
+                th Time
+                th Status
+        tboby
+            each row in data
                 tr
-                    th Flight Number
-                    th Airline
-                    th.hidden-xs Aircraft
-                    th.hidden-xs City (airport)
-                    th Terminal
-                    th Time
-                    th Status
-            tboby
-                each row in data
-                    //tr(class= row.landed ? 'success' : '')
-                    tr
-                        td= row.number
-                        td
-                            img(src= row.airline.img)
-                            span= row.airline.name
-                        td.hidden-xs
-                            span= row.aircraft.name + ' '
-                            = row.aircraft.model
-                        td.hidden-xs= row.destination
-                        td
-                            if (row.terminal === 'A')
-                                i.fa.fa-a
-                            else
-                                i.fa.fa-b
-                        td= row.date.time
-                            br
-                            span= row.date.date
-                        td(class= row.status.status)= row.status.text
+                    td
+                        span(class='label label-' + row.status.class)= row.number
+                    td
+                        img(alt='', src= row.airline.img)
+                        span= row.airline.name
+                    td.hidden-xs
+                        span= row.aircraft.name + ' '
+                        = row.aircraft.model
+                    td.hidden-xs= row.destination
+                    td
+                        if (row.terminal === 'A')
+                            i.fa.fa-a
+                            //span.label.label-primary= row.terminal
+                        else if (row.terminal === 'B')
+                            i.fa.fa-b
+                            //span.label.label-info= row.terminal
+                        else
+                            i.fa.fa-minus
+                    td= row.date.time
+                        br
+                        span= row.date.date
+                    td(class= row.status.class)= row.status.text

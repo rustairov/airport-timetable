@@ -15,7 +15,7 @@
       "destination": "Chelyabinsk",
       "time": "00:05 11.08.2015",
       "status": "Landed 02:14",
-      "terminal": "A"
+      "terminal": ""
     },{
       "number": "ОП 4535",
       "airline": "Gazpromavia",
@@ -31,7 +31,7 @@
       "destination": "Krasnodar (Pashkovsky)",
       "time": "00:20 11.08.2015",
       "status": "Landed 02:55",
-      "terminal": "A"
+      "terminal": ""
     },{
       "number": "ЮТ 265",
       "airline": "UTair Aviation",
