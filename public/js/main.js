@@ -22,20 +22,19 @@ $(function() {
 
     getTable('dep');
 
+    /*
     $('input[name="type"]').bootstrapSwitch({
         onText: '<i class="fa fa-plane"></i>',
         offText: '<i class="fa fa-plane fa-flip-vertical"></i>'
     });
+    */
 
-    $('input[name="type"]').on('switchChange.bootstrapSwitch', function(e, state) {
-        if (state) {
+    $('input[type="radio"]').change(function() {
+        if ($(this).val() === 'dep') {
             getTable('dep');
         } else {
             getTable('arr');
         }
     });
-
-
-
 
 });

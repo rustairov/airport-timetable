@@ -242,6 +242,114 @@
       "terminal": "A"
     }
 
+  ],
+  "arrival" : [
+    {
+      "number": "ДР 408",
+      "airline": "Pobeda",
+      "aircraft": "Боинг 737-800 (в)",
+      "destination": "Ekaterinburg (Koltsovo)",
+      "time": "00:10 13.08.2015",
+      "status": "Landed at 00:14. Baggage delivery closed Д04",
+      "terminal": "D"
+    },{
+      "number": "ДР 272",
+      "airline": "Pobeda",
+      "aircraft": "Боинг 737-800 (в)",
+      "destination": "Surgut",
+      "time": "00:20 13.08.2015",
+      "status": "Landed at 00:07. Baggage delivery closed А04",
+      "terminal": "A"
+    },{
+      "number": "ЯК 477",
+      "airline": "Yakutia",
+      "aircraft": "Боинг 737-800",
+      "destination": "Yakutsk",
+      "time": "01:20 13.08.2015",
+      "status": "Departed at 19:39. Expected at 01:59",
+      "terminal": "A"
+    },{
+      "number": "I4 9514",
+      "airline": "I Fly",
+      "aircraft": "Аэробус А333",
+      "destination": "Shenyang",
+      "time": "02:10 13.08.2015",
+      "status": "Departed at 18:10. Expected at 02:20",
+      "terminal": "A"
+    },{
+      "number": "UN 802",
+      "airline": "Transaero Airlines",
+      "aircraft": "Боинг 737-700",
+      "destination": "Istanbul (Ataturk)",
+      "time": "05:30 13.08.2015",
+      "status": "Not departed. Technical reason Expected at 05:43",
+      "terminal": "A"
+    },{
+      "number": "UT 808",
+      "airline": "UTair Aviation",
+      "aircraft": "Боинг 767-200",
+      "destination": "Bukhara",
+      "time": "06:55 13.08.2015",
+      "status": "-",
+      "terminal": "B"
+    },{
+      "number": "ВГ 2390",
+      "airline": "Vologda Air",
+      "aircraft": "ЯК-40",
+      "destination": "Vologda",
+      "time": "07:30 13.08.2015",
+      "status": "-",
+      "terminal": "A"
+    },{
+      "number": "A9 936",
+      "airline": "Georgian Airways",
+      "aircraft": "Боинг 737-500",
+      "destination": "Tbilisi",
+      "time": "07:50 13.08.2015",
+      "status": "Cancelled",
+      "terminal": "A"
+    },{
+      "number": "ЮТ 174",
+      "airline": "UTair Aviation",
+      "aircraft": "АТР 72",
+      "destination": "Kursk",
+      "time": "08:50 13.08.2015",
+      "status": "-",
+      "terminal": "D"
+    },{
+      "number": "ГГ 722",
+      "airline": "Grozny Avia",
+      "aircraft": "ЯК-42/ЯК-142",
+      "destination": "Groznyj",
+      "time": "13:10 13.08.2015",
+      "status": "-",
+      "terminal": "A"
+    },{
+      "number": "OS 7071",
+      "airline": "Austrian Airlines",
+      "aircraft": "Боинг 737-700",
+      "destination": "Vienna",
+      "time": "17:10 13.08.2015",
+      "status": "-",
+      "terminal": "A"
+    },{
+      "number": "LH 1470",
+      "airline": "Lufthansa",
+      "aircraft": "Аэробус А319",
+      "destination": "Frankfurt (Int.)",
+      "time": "17:25 13.08.2015",
+      "status": "-",
+      "terminal": ""
+    },{
+      "number": "BT 7418",
+      "airline": "airBaltic",
+      "aircraft": "Боинг 737-700",
+      "destination": "Riga (Int.)",
+      "time": "23:20 13.08.2015",
+      "status": "-",
+      "terminal": "A"
+    }
+
   ]
 
 }

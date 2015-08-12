@@ -1,5 +1,5 @@
 .panel.panel-default
-    table.table.table-striped.table-bordered.table-hover
+    table.table.table-striped.table-bordered.table-hover.shadow
         thead
             tr
                 th Flight Number
@@ -24,10 +24,10 @@
                     td
                         if (row.terminal === 'A')
                             i.fa.fa-a
-                            //span.label.label-primary= row.terminal
                         else if (row.terminal === 'B')
                             i.fa.fa-b
-                            //span.label.label-info= row.terminal
+                        else if (row.terminal === 'D')
+                            i.fa.fa-d
                         else
                             i.fa.fa-minus
                     td= row.date.time

@@ -4,12 +4,28 @@ block body
     .container
         .row
             .col-xs-12.col-lg-10.col-lg-offset-1
-                .white-back
-                    .row
-                        .col-xs-12.col-md-6.text-left.padding-15
-                            h3= airport
-                        .col-xs-12.col-md-6.text-right.padding-15
-                            input(type='checkbox', name='type', checked, data-size='large')
-                    .row
-                        .col-xs-12
-                            #table
+                .row
+                    .col-xs-12.padding-15
+                        #clock-container
+                            svg(id="clock", viewBox="0 0 100 100")
+                                circle(id="face", cx="50", cy="50", r="49", fill="white")
+                                g(id="hands")
+                                    rect(id="hour", x="47.5", y="12.5", width="5", height="40", rx="2.5", ry="2.55")
+                                    rect(id="min", x="48.5", y="12.5", width="3", height="40", rx="2", ry="2")
+                                    line(id="sec", x1="50", y1="50", x2="50", y2="16")
+                .row
+                    .col-xs-12.col-md-6.text-left.padding-15
+                        h3= airport
+                    .col-xs-12.col-md-6.text-right.padding-15
+                        .btn-group(data-toggle="buttons")
+                            label.btn.btn-default.active
+                                input(type="radio", name="type", value="dep", autocomplete="off", checked)
+                                i.fa.fa-plane
+                                | Departure
+                            label.btn.btn-default
+                                input(type="radio", name="type",value="arr", autocomplete="off")
+                                i.fa.fa-plane.fa-flip-vertical
+                                | Arrival
+                .row
+                    .col-xs-12.padding-15
+                        #table

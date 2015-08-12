@@ -63,7 +63,7 @@ router.get('/', function(req, res, next) {
     });
 });
 
-/* GET dme airoport. */
+/* GET dme airport. */
 router.get('/dme/:type?', function(req, res, next) {
     var airport = 'Moscow, Domodedovo (DME)';
     var type = req.params.type;
@@ -78,7 +78,7 @@ router.get('/dme/:type?', function(req, res, next) {
     }
 }, getFlights);
 
-/* GET svo airoport. */
+/* GET svo airport. */
 router.get('/svo/:type?', function(req, res, next) {
     var airport = 'Moscow, Sheremetyevo (SVO)';
     var type = req.params.type;
@@ -93,7 +93,7 @@ router.get('/svo/:type?', function(req, res, next) {
     }
 }, getFlights);
 
-/* GET vko airoport. */
+/* GET vko airport. */
 router.get('/vko/:type?', function(req, res, next) {
     var airport = 'Moscow, Vnukovo (VKO)';
     var type = req.params.type;
