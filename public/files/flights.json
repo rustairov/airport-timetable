@@ -159,7 +159,7 @@
       "destination": "Tbilisi",
       "time": "09:05 11.08.2015",
       "status": "Cancelled",
-      "terminal": "A"
+      "terminal": ""
     },{
       "number": "UN 301",
       "airline": "Transaero Airlines",
@@ -307,7 +307,7 @@
       "destination": "Tbilisi",
       "time": "07:50 13.08.2015",
       "status": "Cancelled",
-      "terminal": "A"
+      "terminal": ""
     },{
       "number": "ЮТ 174",
       "airline": "UTair Aviation",
@@ -339,7 +339,7 @@
       "destination": "Frankfurt (Int.)",
       "time": "17:25 13.08.2015",
       "status": "-",
-      "terminal": ""
+      "terminal": "A"
     },{
       "number": "BT 7418",
       "airline": "airBaltic",
