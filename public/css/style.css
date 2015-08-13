@@ -61,9 +61,9 @@ td:nth-child(6) span {
 }
 
 .shadow {
-    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.8);
 }
 
 .panel {
