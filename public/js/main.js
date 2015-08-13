@@ -17,17 +17,11 @@ $(function() {
             date: date.yyyymmdd()
         }, function(data, textStatus, jqXHR) {
             $('#table').html(data);
+	        $('.table-fixed-header').fixedHeader();
         });
     };
 
     getTable('dep');
-
-    /*
-    $('input[name="type"]').bootstrapSwitch({
-        onText: '<i class="fa fa-plane"></i>',
-        offText: '<i class="fa fa-plane fa-flip-vertical"></i>'
-    });
-    */
 
     $('input[type="radio"]').change(function() {
         if ($(this).val() === 'dep') {
@@ -36,5 +30,4 @@ $(function() {
             getTable('arr');
         }
     });
-
 });

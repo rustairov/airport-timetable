@@ -1,7 +1,8 @@
+function r(el, deg) {
+	el.setAttribute('transform', 'rotate('+ deg +' 50 50)')
+}
+
 setInterval(function() {
-    function r(el, deg) {
-        el.setAttribute('transform', 'rotate('+ deg +' 50 50)')
-    }
     var d = new Date();
     r(sec, 6*d.getSeconds());
     r(min, 6*d.getMinutes());

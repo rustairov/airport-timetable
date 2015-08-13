@@ -1,9 +1,9 @@
 .panel.panel-default
-    table.table.table-striped.table-bordered.table-hover.shadow
-        thead
+    table.table.table-striped.table-bordered.table-hover.table-fixed-header.shadow
+        thead.header
             tr
                 th Flight Number
-                th Airline
+                th.hidden-xs  Airline
                 th.hidden-xs Aircraft
                 th.hidden-xs City (airport)
                 th Terminal
@@ -14,7 +14,7 @@
                 tr
                     td
                         span(class='label label-' + row.status.class)= row.number
-                    td
+                    td.hidden-xs
                         img(alt='', src= row.airline.img)
                         span= row.airline.name
                     td.hidden-xs
