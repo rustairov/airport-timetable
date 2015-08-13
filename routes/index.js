@@ -6,8 +6,8 @@ var getFlights = function(req, res) {
     var type = req.params.type;
 
     //любые другие данные либо запрос к какому-нибудь api
-    fs.readFile(__dirname + '/../public/files/flights.json', function(err, data) {
-        var json = JSON.parse(data.toString())
+    fs.readFile(__dirname + '/../public/files/flights.json', 'utf8', function(err, data) {
+        var json = JSON.parse(data)
 	        , arr = []
 	        , flights = [];
 
@@ -59,7 +59,8 @@ var getFlights = function(req, res) {
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'Main'
+        title: 'Airport timetable',
+        background: 'airport'
     });
 });
 
