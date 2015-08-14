@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
+/* Функция-заглушка для получения данных */
 var getFlights = function(req, res) {
     var type = req.params.type;
 
