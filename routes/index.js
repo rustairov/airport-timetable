@@ -38,10 +38,12 @@ var getFlights = function(req, res) {
 			    status: {
                     text: flight.status,
                     class: function() {
-                         if (/Landed/.test(flight.status)) {
+                         if (/Landed/i.test(flight.status)) {
                              return 'success';
-                         } else if (/Cancelled/.test(flight.status)) {
+                         } else if (/Cancelled/i.test(flight.status)) {
                              return 'danger';
+                         } else if (/Not/i.test(flight.status)) {
+	                         return 'warning';
                          } else {
                             return 'primary';
                          }
