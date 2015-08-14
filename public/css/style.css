@@ -38,6 +38,15 @@ td:nth-child(6) span {  font-size: 10px;  }
 
 .table {  background-color: #fff;  }
 
+.table-striped > tbody > tr:nth-of-type(odd) > td.success {  background-color: #cdf0c3;  }
+.table-striped > tbody > tr:nth-of-type(odd):hover > td.success {  background-color: #d0e9c6;  }
+
+.table-striped > tbody > tr:nth-of-type(odd) > td.danger {  background-color: #f2d0cd;  }
+.table-striped > tbody > tr:nth-of-type(odd):hover > td.danger {  background-color: #ebcccc;  }
+
+.table-striped > tbody > tr:nth-of-type(odd) > td.warning {  background-color: #fcf8d3;  }
+.table-striped > tbody > tr:nth-of-type(odd):hover > td.warning {  background-color: #faf2cc;  }
+
 .shadow {
     -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.8);
     -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.8);
