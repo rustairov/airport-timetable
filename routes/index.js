@@ -23,7 +23,7 @@ var getFlights = function(req, res) {
 				number: flight.number,
 			    airline: {
 				    name: flight.airline,
-				    img: '/imgs/airline/' + flight.airline.replace(/\s/g,'_') + '.png'
+				    img: 'imgs/airline/' + flight.airline.replace(/\s/g,'_') + '.png'
 			    },
 			    aircraft: {
 				    name: flight.aircraft.split(' ')[0],
