@@ -13,7 +13,7 @@
             each row in data
                 tr
                     td
-                        span(class='label label-' + row.status.class)= row.number
+                        span(class='label label-' + row.status.style)= row.number
                     td.hidden-xs
                         img(alt='', src= row.airline.img)
                         span= row.airline.name
@@ -33,4 +33,4 @@
                     td= row.date.time
                         br
                         span= row.date.date
-                    td(class= row.status.class)= row.status.text
+                    td(class= row.status.style)= row.status.text

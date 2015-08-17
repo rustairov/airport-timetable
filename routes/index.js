@@ -36,21 +36,21 @@ var getFlights = function(req, res) {
 
 			    },
 			    status: {
-                    text: flight.status,
-                    class: function() {
-                         if (/Landed/i.test(flight.status)) {
-                             return 'success';
-                         } else if (/Cancelled/i.test(flight.status)) {
-                             return 'danger';
-                         } else if (/Not/i.test(flight.status)) {
-	                         return 'warning';
-                         } else {
-                            return 'primary';
-                         }
-                    }()
-                }
+				    text: flight.status,
+				    style: function() {
+					    if (/Landed/i.test(flight.status)) {
+						    return 'success';
+					    } else if (/Cancelled/i.test(flight.status)) {
+						    return 'danger';
+					    } else if (/Not/i.test(flight.status)) {
+						    return 'warning';
+					    } else {
+						    return 'primary';
+					    }
+				    }()
+			    }
 		    });
-        });
+	    });
 
         res.render('table', { data: arr });
 
