@@ -54,28 +54,28 @@ td:nth-child(6) span {  font-size: 10px;  }
 }
 
 .dme {
-    background: url(/imgs/dme.jpg) no-repeat fixed;
+    background: url(../imgs/dme.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .svo {
-    background: url(/imgs/svo.jpg) no-repeat fixed;
+    background: url(../imgs/svo.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .vko {
-    background: url(/imgs/vko.jpg) no-repeat fixed;
+    background: url(../imgs/vko.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .airport {
-    background: url(/imgs/airport.jpg) no-repeat fixed;
+    background: url(../imgs/airport.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

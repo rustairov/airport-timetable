@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
+/* Функция-заглушка для получения данных */
 var getFlights = function(req, res) {
     var type = req.params.type;
 
@@ -22,7 +23,7 @@ var getFlights = function(req, res) {
 				number: flight.number,
 			    airline: {
 				    name: flight.airline,
-				    img: '/imgs/airline/' + flight.airline.replace(/\s/g,'_') + '.png'
+				    img: 'imgs/airline/' + flight.airline.replace(/\s/g,'_') + '.png'
 			    },
 			    aircraft: {
 				    name: flight.aircraft.split(' ')[0],
